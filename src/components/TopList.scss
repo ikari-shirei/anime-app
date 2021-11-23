@@ -1,0 +1,19 @@
+.top-list {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  .search-cards-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    .search-container {
+      margin: 32px;
+    }
+    .cards-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}

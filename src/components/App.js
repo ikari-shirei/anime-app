@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
 import './App.scss'
 import Navbar from './Navbar'
 import Search from './Search'
@@ -13,7 +14,15 @@ function App() {
     <div className="app">
       <Navbar data={{ title: 'Top Anime' }} />
       <main>
-        <Search />
+        <div className="search-container">
+          <h2>Search Top Anime</h2>
+
+          <Search />
+          <p>or</p>
+          <Link to="/top-list">
+            <h2>Look at top anime list</h2>
+          </Link>
+        </div>
       </main>
     </div>
   )
