@@ -2,6 +2,7 @@ import './Home.scss'
 import Navbar from './Navbar'
 import Searchbar from './Searchbar'
 import Card from './Card'
+import { Link } from 'react-router-dom'
 
 function Home() {
   return (
@@ -13,7 +14,9 @@ function Home() {
         </h1>
         <Searchbar />
         <div className="or">or</div>
-        <h3 className="top-anime">Look at the top anime of all time</h3>
+        <Link to="/top-anime" className="top-anime">
+          Look at the top anime of all time
+        </Link>
       </div>
       <div className="anime-of-the-day">
         <h1 className="day-header">Anime of the Day</h1>
