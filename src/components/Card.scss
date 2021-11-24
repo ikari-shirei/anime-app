@@ -1,0 +1,60 @@
+@import '../index.scss';
+
+@mixin list-item {
+  font-size: $font-size-3;
+  font-weight: $font-weight-1;
+  color: $color2-opacity-50;
+
+  span {
+    color: $color2;
+    font-weight: $font-weight-3;
+  }
+}
+
+.card {
+  display: flex;
+  padding-bottom: 16px;
+
+  color: $color2;
+  background: $color1;
+  box-shadow: $box-shadow-1;
+  border-radius: 15px;
+  .card-left {
+    img {
+      width: 100px;
+      height: 150px;
+      border-radius: 15px 0 0 0;
+    }
+    .rank-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      div {
+        @include list-item();
+        margin-top: 8px;
+      }
+    }
+  }
+  .card-right {
+    display: flex;
+    flex-direction: column;
+    h1 {
+      margin: 16px 8px 0 8px;
+
+      font-size: $font-size-3;
+      font-weight: $font-weight-3;
+    }
+    .list-item {
+      margin: 8px 0 0 8px;
+      @include list-item();
+    }
+    /*  .details {
+      position: relative;
+      bottom: 0;
+      align-self: flex-end;
+      justify-self: flex-end;
+      text-align: end;
+    } */
+  }
+}

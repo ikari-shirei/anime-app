@@ -1,10 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+$font: 'Roboto', sans-serif;
+$font-size-1: 8px;
+$font-size-2: 12px;
+$font-size-3: 16px;
+$font-size-4: 18px;
+$font-size-5: 20px;
+$font-size-6: 24px;
+$font-size-7: 32px;
+
+$font-weight-1: 300;
+$font-weight-2: 400;
+$font-weight-3: 700;
+
+$color1: #253237;
+$color1-opacity-50: rgba(37, 50, 55, 0.5);
+$color1-opacity-75: rgba(37, 50, 55, 0.75);
+$color2: #e0fbfc;
+$color2-opacity-50: rgba(223, 251, 252, 0.5);
+
+$box-shadow-1: 0px 2px 4px rgba(37, 50, 55, 0.25);
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: $font;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: #e0fbfc;
 }
 
 code {

@@ -1,0 +1,19 @@
+@import '../index.scss';
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 16px;
+  background: $color2;
+  color: $color1;
+
+  h1 {
+    font-size: $font-size-4;
+    margin: 0;
+  }
+  img {
+    width: 32px;
+    height: 32px;
+  }
+}
