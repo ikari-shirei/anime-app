@@ -1,6 +1,9 @@
 @import '../index.scss';
 
 .home {
+  position: relative;
+  min-height: 100vh;
+
   .start {
     display: flex;
     flex-direction: column;

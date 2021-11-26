@@ -1,13 +1,22 @@
 import './Searchbar.scss'
-import search from '../icons/search.svg'
 
-function Searchbar() {
+function Searchbar({ onChange, searchResults }) {
   return (
     <div className="searchbar">
-      <input type="text" placeholder="Search"></input>
-      {/*  <button>
-        <img src={search} alt="Searchbar" />
-      </button> */}
+      <input type="text" placeholder="Search" onChange={onChange}></input>
+      <div className="search-value-container">
+        {searchResults
+          ? searchResults.map((x) => {
+              return x ? (
+                <p key={x} className="search-value-cell">
+                  {x}
+                </p>
+              ) : (
+                <p className="search-value-cell">Loading</p>
+              )
+            })
+          : ''}
+      </div>
     </div>
   )
 }
