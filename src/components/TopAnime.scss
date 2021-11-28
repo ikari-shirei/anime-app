@@ -15,6 +15,13 @@
 
         cursor: pointer;
       }
+      select {
+        border: 0;
+        border-radius: 15px;
+        padding: 8px;
+        color: $color2;
+        background: $color1;
+      }
     }
     .cards-container {
       display: flex;

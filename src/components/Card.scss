@@ -39,22 +39,39 @@
   .card-right {
     display: flex;
     flex-direction: column;
-    h1 {
-      margin: 16px 8px 0 8px;
+    width: 100%;
+    height: auto;
 
-      font-size: $font-size-3;
-      font-weight: $font-weight-3;
+    .card-right-first {
+      h1 {
+        margin: 16px 8px 0 8px;
+
+        font-size: $font-size-3;
+        font-weight: $font-weight-3;
+      }
+      .list-item {
+        margin: 8px 0 0 8px;
+        @include list-item();
+      }
     }
-    .list-item {
-      margin: 8px 0 0 8px;
-      @include list-item();
-    }
-    /*  .details {
+    .card-right-second {
       position: relative;
-      bottom: 0;
-      align-self: flex-end;
-      justify-self: flex-end;
+      display: flex;
+      justify-content: flex-end;
+      align-items: flex-end;
       text-align: end;
-    } */
+      width: 100%;
+      height: 100%;
+      /*    display: flex;
+      justify-content: flex-end;
+      align-items: flex-end;
+      text-align: end; */
+      .details {
+        font-weight: $font-weight-3;
+        font-size: $font-size-3;
+        justify-self: flex-end;
+        margin-right: 8px;
+      }
+    }
   }
 }

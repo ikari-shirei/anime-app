@@ -12,7 +12,9 @@ function Navbar() {
 
   return !navbarState ? (
     <div className="navbar">
-      <h1>Anime Finder</h1>
+      <Link to="/">
+        <h1>Anime Finder</h1>
+      </Link>
       <img onClick={switchNavbarState} src={menu} alt="menu" />
     </div>
   ) : (

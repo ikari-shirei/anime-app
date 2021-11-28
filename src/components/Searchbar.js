@@ -1,4 +1,5 @@
 import './Searchbar.scss'
+import { Link } from 'react-router-dom'
 
 function Searchbar({ onChange, searchResults }) {
   return (
@@ -6,11 +7,15 @@ function Searchbar({ onChange, searchResults }) {
       <input type="text" placeholder="Search" onChange={onChange}></input>
       {searchResults ? (
         <div className="search-value-container">
-          {searchResults.map((x) => {
-            return x ? (
-              <p key={x} className="search-value-cell">
-                {x}
-              </p>
+          {/* anime[0] === anime title
+              anime[1] === mal id */}
+          {searchResults.map((anime) => {
+            return anime ? (
+              <Link to={`/anime:${anime[1]}`}>
+                <p key={anime[1]} className="search-value-cell">
+                  {anime[0]}
+                </p>
+              </Link>
             ) : (
               <p className="search-value-cell">Loading</p>
             )

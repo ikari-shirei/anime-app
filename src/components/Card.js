@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import './Card.scss'
 
 function Card({ anime }) {
@@ -12,16 +13,22 @@ function Card({ anime }) {
         </div>
       </div>
       <div className="card-right">
-        <h1>{anime.title}</h1>
-        <div className="list-item">
-          <span>{anime.score}</span> MAL score
+        <div className="card-right-first">
+          <h1>{anime.title}</h1>
+          <div className="list-item">
+            <span>{anime.score}</span> MAL score
+          </div>
+          <div className="list-item">
+            <span>{anime.episodes}</span> episodes
+          </div>
         </div>
-        <div className="list-item">
-          <span>{anime.episodes}</span> episodes
+        <div className="card-right-second">
+          <div className="details">
+            <Link to={`/anime:${anime.mal_id}`}>
+              Go to details<span></span>
+            </Link>
+          </div>
         </div>
-        {/*  <div className="details">
-          Go to details <span>ok</span>
-        </div> */}
       </div>
     </div>
   )

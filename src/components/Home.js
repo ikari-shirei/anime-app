@@ -26,10 +26,11 @@ function Home() {
 
   const filterTopAnime = () => {
     if (topAnime) {
-      const topAnimeNames = topAnime.map((x) => x.title)
-      const filteredTopAnimeNames = topAnimeNames.filter((x) =>
-        x.toLowerCase().includes(searchValue.toLowerCase())
-      )
+      const topAnimeNames = topAnime.map((x) => [x.title, x.mal_id])
+      const filteredTopAnimeNames = topAnimeNames.filter((x) => {
+        return x[0].toLowerCase().includes(searchValue.toLowerCase()) ? x : ''
+      })
+
       if (
         filteredTopAnimeNames.length < 15 &&
         filteredTopAnimeNames.length !== 0
@@ -69,6 +70,7 @@ function Home() {
         />
 
         <div className="or">or</div>
+
         <Link to="/top-anime" className="top-anime">
           Look at the top anime of all time
         </Link>

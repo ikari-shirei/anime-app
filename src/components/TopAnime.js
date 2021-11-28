@@ -28,10 +28,17 @@ function TopAnime() {
         return x.title < y.title
       })
 
+      const sortEpisodes = topAnime.slice().sort((x, y) => {
+        return x.episodes > y.episodes
+      })
+
       if (e === 'az') {
         setCurrentList(sortAZ)
       } else if (e === 'za') {
         setCurrentList(sortZA)
+      } else if (e === 'episodes') {
+        setCurrentList(sortEpisodes)
+        console.log(topAnime)
       } else {
         setCurrentList(topAnime)
       }
@@ -51,6 +58,7 @@ function TopAnime() {
               onChange={(e) => sortFunction(e.target.value)}
             >
               <option value="rank">Sort by Rank</option>
+              <option value="episodes">Sort by Episodes</option>
               <option value="az">Sort by A-Z</option>
               <option value="za">Sort by Z-A</option>
             </select>
