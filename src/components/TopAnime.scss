@@ -1,0 +1,32 @@
+@import '../index.scss';
+
+.top-anime {
+  color: $color1;
+  .main-content {
+    .sort-container {
+      margin: 0 16px;
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      .header {
+        font-size: $font-size-6;
+        font-weight: $font-weight-3;
+        font-style: italic;
+
+        cursor: pointer;
+      }
+    }
+    .cards-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+
+      .card {
+        margin: 16px;
+        width: 350px;
+        max-width: 400px;
+      }
+    }
+  }
+}

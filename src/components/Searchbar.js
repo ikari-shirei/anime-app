@@ -4,19 +4,21 @@ function Searchbar({ onChange, searchResults }) {
   return (
     <div className="searchbar">
       <input type="text" placeholder="Search" onChange={onChange}></input>
-      <div className="search-value-container">
-        {searchResults
-          ? searchResults.map((x) => {
-              return x ? (
-                <p key={x} className="search-value-cell">
-                  {x}
-                </p>
-              ) : (
-                <p className="search-value-cell">Loading</p>
-              )
-            })
-          : ''}
-      </div>
+      {searchResults ? (
+        <div className="search-value-container">
+          {searchResults.map((x) => {
+            return x ? (
+              <p key={x} className="search-value-cell">
+                {x}
+              </p>
+            ) : (
+              <p className="search-value-cell">Loading</p>
+            )
+          })}
+        </div>
+      ) : (
+        ''
+      )}
     </div>
   )
 }

@@ -16,12 +16,11 @@ function Home() {
     setSearchValue(e)
   }
 
-  const getFrom = async () => {
+  const getTopAnimeFrom = async () => {
     const data = await fetch('https://api.jikan.moe/v3/top/anime')
       .then((res) => res.json())
       .catch((err) => console.log(err))
 
-    console.log(data)
     setTopAnime(data.top)
   }
 
@@ -29,9 +28,12 @@ function Home() {
     if (topAnime) {
       const topAnimeNames = topAnime.map((x) => x.title)
       const filteredTopAnimeNames = topAnimeNames.filter((x) =>
-        x.toLowerCase().includes(searchValue)
+        x.toLowerCase().includes(searchValue.toLowerCase())
       )
-      if (filteredTopAnimeNames.length < 15) {
+      if (
+        filteredTopAnimeNames.length < 15 &&
+        filteredTopAnimeNames.length !== 0
+      ) {
         setSearchResult(filteredTopAnimeNames.slice(0, 4))
       } else {
         setSearchResult(null)
@@ -39,7 +41,7 @@ function Home() {
     }
   }
 
-  useEffect(() => getFrom(), [])
+  useEffect(() => getTopAnimeFrom(), [])
   useEffect(() => filterTopAnime(), [searchValue])
 
   const createAnimeOfTheDay = async () => {

@@ -1,6 +1,8 @@
 @import '../index.scss';
 
 .navbar {
+  position: sticky;
+
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -15,5 +17,45 @@
   img {
     width: 32px;
     height: 32px;
+    cursor: pointer;
+  }
+}
+
+.navbar-open {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  z-index: 10;
+
+  background: $color2;
+  color: $color1;
+
+  .navbar-top {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin: 8px 16px;
+    h1 {
+      font-size: $font-size-4;
+      margin: 0;
+    }
+    img {
+      width: 32px;
+      height: 32px;
+      cursor: pointer;
+    }
+  }
+
+  .navbar-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    a {
+      font-size: $font-size-6;
+      font-weight: $font-weight-3;
+      margin: 16px;
+    }
   }
 }
