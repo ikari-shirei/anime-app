@@ -7,8 +7,8 @@
   justify-content: space-between;
   align-items: center;
   padding: 8px 16px;
-  background: $color2;
-  color: $color1;
+  background: $color1;
+  color: $color2;
 
   h1 {
     font-size: $font-size-4;
@@ -28,7 +28,7 @@
   overflow: hidden;
   z-index: 10;
 
-  background: $color2;
+  background: $color3;
   color: $color1;
 
   .navbar-top {

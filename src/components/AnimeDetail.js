@@ -1,5 +1,7 @@
 import { useState, useEffect } from 'react'
 import { useParams } from 'react-router'
+import Navbar from './Navbar'
+import AnimeDetailPresent from './AnimeDetailPresent'
 import './AnimeDetail.scss'
 
 function AnimeDetail() {
@@ -15,17 +17,15 @@ function AnimeDetail() {
       .then((res) => res.json())
       .catch((err) => console.log(err))
 
-    console.log(data)
     setTargetAnime(data)
   }
 
   useEffect(() => getAnimeFrom(), [])
 
   return (
-    <div>
-      <h1>XXX</h1>
-      {targetAnime ? targetAnime.title : ''}
-      {targetAnime ? targetAnime.mal_id : ''}
+    <div className="anime-detail ">
+      <Navbar />
+      <AnimeDetailPresent targetAnime={targetAnime} />
     </div>
   )
 }

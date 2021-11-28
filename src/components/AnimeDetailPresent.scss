@@ -1,0 +1,78 @@
+@import '../index.scss';
+
+.anime-detail-present {
+  .presentation-container-all {
+    .presentation-container {
+      display: flex;
+      margin: 16px;
+      img {
+        border-radius: 15px;
+        box-shadow: $box-shadow-1;
+      }
+      .attributes-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        margin-left: 16px;
+        width: 100%;
+        height: auto;
+        .attribute-cell {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          height: 100%;
+          background-color: $color1;
+          color: $color2;
+          border-radius: 16px;
+          box-shadow: $box-shadow-1;
+
+          &:nth-child(2) {
+            margin-top: 16px;
+            margin-bottom: 16px;
+          }
+
+          .attribute-header {
+            margin-top: 8px;
+            margin-bottom: 16px;
+            font-size: $font-size-3;
+            font-weight: $font-weight-2;
+            color: $color2-opacity-50;
+          }
+
+          .attribute {
+            font-size: $font-size-3;
+            font-weight: $font-weight-3;
+          }
+        }
+      }
+    }
+    .anime-header-container {
+      color: $color1;
+      margin: 16px;
+      .anime-header {
+        font-size: $font-size-6;
+        margin: 0;
+      }
+      .genres-container {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: baseline;
+
+        margin: 8px 0 8px 0;
+        .anime-genre {
+          margin: 0;
+          margin-right: 8px;
+
+          font-size: $font-size-3;
+          font-weight: $font-weight-1;
+        }
+      }
+      .anime-background {
+        font-size: $font-size-3;
+        font-weight: $font-weight-2;
+        margin: 0;
+      }
+    }
+  }
+}

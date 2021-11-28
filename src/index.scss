@@ -18,15 +18,27 @@ $color1-opacity-50: rgba(37, 50, 55, 0.5);
 $color1-opacity-75: rgba(37, 50, 55, 0.75);
 $color2: #e0fbfc;
 $color2-opacity-50: rgba(223, 251, 252, 0.5);
+$color3: #00d4ff;
 
-$box-shadow-1: 0px 2px 4px rgba(37, 50, 55, 0.25);
+$box-shadow-1: 0px 2px 4px rgba(37, 50, 55, 0.5);
+
+@mixin gradient1 {
+  background: rgb(224, 251, 252);
+  background: linear-gradient(
+    0deg,
+    rgba(0, 212, 255, 1) 0%,
+    rgba(224, 251, 252, 1) 35%,
+    rgba(224, 251, 252, 1) 100%
+  );
+}
 
 body {
   margin: 0;
   font-family: $font;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: #e0fbfc;
+  background: $color3;
+
   min-height: 100vh;
 }
 

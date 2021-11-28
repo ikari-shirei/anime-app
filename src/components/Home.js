@@ -50,9 +50,11 @@ function Home() {
       .then((res) => res.json())
       .catch((err) => console.log(err))
 
-    const randomNumber = Math.floor(Math.random() * data.top.length)
-    console.log(data.top[randomNumber])
-    setAnimeOfTheDay(data.top[randomNumber])
+    if (data.top) {
+      const randomNumber = Math.floor(Math.random() * data.top.length)
+      console.log(data.top[randomNumber])
+      setAnimeOfTheDay(data.top[randomNumber])
+    }
   }
 
   useEffect(() => createAnimeOfTheDay(), [])
