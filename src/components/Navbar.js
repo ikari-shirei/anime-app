@@ -1,32 +1,38 @@
-import * as React from 'react'
-import AppBar from '@mui/material/AppBar'
-import Box from '@mui/material/Box'
-import Toolbar from '@mui/material/Toolbar'
-import Typography from '@mui/material/Typography'
-import Button from '@mui/material/Button'
-import IconButton from '@mui/material/IconButton'
-import MenuIcon from '@material-ui/icons/Menu'
+import './Navbar.scss'
+import menu from '../icons/menu.svg'
+import { Link } from 'react-router-dom'
+import { useState } from 'react'
 
-export default function ButtonAppBar({ data }) {
-  return (
-    <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="static">
-        <Toolbar>
-          <IconButton
-            size="large"
-            edge="start"
-            color="inherit"
-            aria-label="menu"
-            sx={{ mr: 2 }}
-          >
-            <MenuIcon />
-          </IconButton>
-          <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-            {data.title}
-          </Typography>
-          {/* <Button color="inherit">Login</Button> */}
-        </Toolbar>
-      </AppBar>
-    </Box>
+function Navbar() {
+  const [navbarState, setNavbarState] = useState(false)
+
+  const switchNavbarState = () => {
+    setNavbarState(!navbarState)
+  }
+
+  return !navbarState ? (
+    <div className="navbar">
+      <Link to="/">
+        <h1>Anime Finder</h1>
+      </Link>
+      <img onClick={switchNavbarState} src={menu} alt="menu" />
+    </div>
+  ) : (
+    <div className="navbar-open">
+      <div className="navbar-top">
+        {/*     <h1>Anime Soughter</h1> */}
+        <img onClick={switchNavbarState} src={menu} alt="menu" />
+      </div>
+      <div className="navbar-content">
+        <Link to="/" onClick={switchNavbarState}>
+          Home
+        </Link>
+        <Link to="/top-anime" onClick={switchNavbarState}>
+          Top Anime
+        </Link>
+      </div>
+    </div>
   )
 }
+
+export default Navbar

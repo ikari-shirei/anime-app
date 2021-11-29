@@ -1,0 +1,62 @@
+@import '../index.scss';
+
+.home {
+  position: relative;
+  min-height: 100vh;
+
+  .start {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 16px;
+    .welcome-header {
+      margin-top: 32px;
+      margin-bottom: 0;
+
+      font-size: $font-size-5;
+      font-weight: $font-weight-2;
+
+      span {
+        font-weight: 700;
+      }
+    }
+    .or {
+      font-size: $font-size-3;
+      font-weight: $font-weight-1;
+    }
+    .top-anime {
+      margin: 16px;
+
+      font-size: $font-size-3;
+      font-weight: $font-weight-2;
+      font-style: italic;
+
+      border-bottom: 2px solid $color1-opacity-50;
+      cursor: pointer;
+    }
+  }
+
+  .anime-of-the-day {
+    margin: 16px;
+
+    .day-header {
+      margin: 0;
+
+      font-size: $font-size-6;
+      color: $color1;
+      font-weight: $font-weight-2;
+    }
+    .day-card {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 16px;
+      margin-bottom: 16px;
+
+      .card {
+        width: 100%;
+      }
+    }
+  }
+}

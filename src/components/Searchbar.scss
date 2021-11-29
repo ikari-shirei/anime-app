@@ -1,0 +1,49 @@
+@import '../index.scss';
+
+.searchbar {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+
+  padding: 0 16px;
+  margin: 16px 0;
+
+  input {
+    width: 100%;
+    font-size: $font-size-2;
+    background: $color1;
+    color: $color2;
+    border: 0;
+    border-radius: 15px;
+    padding: 12px 8px;
+    z-index: 2;
+  }
+  .search-value-container {
+    width: 80%;
+    position: absolute;
+    top: 0;
+    margin-top: 39px;
+
+    background-color: $color1;
+    color: $color2;
+    padding: 8px;
+    border-radius: 0 0 15px 15px;
+    overflow: hidden;
+    /* border-top: 2px solid $color2-opacity-50; */
+
+    p {
+      margin: 0;
+      padding: 16px;
+      border-radius: 15px;
+      &:hover {
+        background-color: $color2;
+        color: $color1;
+        cursor: pointer;
+      }
+    }
+  }
+}
