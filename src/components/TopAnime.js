@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import Navbar from './Navbar'
 import Card from './Card'
-import Footer from './Footer'
 import Loading from './Loading'
 import './TopAnime.scss'
 
@@ -80,7 +79,6 @@ function TopAnime() {
           )}
         </div>
       </div>
-      <Footer />
     </div>
   )
 }
