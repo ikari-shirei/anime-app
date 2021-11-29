@@ -27,7 +27,25 @@ function AnimeDetail() {
     <div className="anime-detail ">
       <Navbar />
       {targetAnime ? (
-        <AnimeDetailPresent targetAnime={targetAnime} />
+        <div className="anime-detail-container">
+          <AnimeDetailPresent targetAnime={targetAnime} />
+          <div className="synopsis-container">
+            <h2>Synopsis</h2>
+            <p>{targetAnime.synopsis}</p>
+          </div>
+          {targetAnime.trailer_url ? (
+            <div className="trailer-container">
+              <h2>Watch Trailer</h2>
+              <iframe
+                title={targetAnime.title}
+                src={targetAnime.trailer_url + 'autoplay=0'}
+                className="trailer"
+              ></iframe>
+            </div>
+          ) : (
+            ''
+          )}
+        </div>
       ) : (
         <Loading className="loading-class-center" />
       )}
