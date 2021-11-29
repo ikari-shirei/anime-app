@@ -26,7 +26,11 @@ function AnimeDetailPresent({ targetAnime }) {
             <h1 className="anime-header">{targetAnime.title}</h1>
             <div className="genres-container">
               {targetAnime.genres.map((genre) => {
-                return <h2 className="anime-genre">{genre.name}</h2>
+                return (
+                  <h2 key={genre.mal_id} className="anime-genre">
+                    {genre.name}
+                  </h2>
+                )
               })}
             </div>
             <h3 className="anime-background">{targetAnime.background}</h3>

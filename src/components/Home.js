@@ -5,6 +5,7 @@ import Card from './Card'
 import Footer from './Footer'
 import { Link } from 'react-router-dom'
 import { useState, useEffect } from 'react'
+import Loading from './Loading'
 
 function Home() {
   const [searchValue, setSearchValue] = useState('')
@@ -80,7 +81,7 @@ function Home() {
       <div className="anime-of-the-day">
         <h1 className="day-header">Anime of the Day</h1>
         <div className="day-card">
-          {animeOfTheDay ? <Card anime={animeOfTheDay} /> : ''}
+          {animeOfTheDay ? <Card anime={animeOfTheDay} /> : <Loading />}
         </div>
       </div>
       <Footer />

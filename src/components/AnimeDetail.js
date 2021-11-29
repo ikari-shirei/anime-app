@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import { useParams } from 'react-router'
 import Navbar from './Navbar'
 import AnimeDetailPresent from './AnimeDetailPresent'
+import Loading from './Loading'
 import './AnimeDetail.scss'
 
 function AnimeDetail() {
@@ -25,7 +26,11 @@ function AnimeDetail() {
   return (
     <div className="anime-detail ">
       <Navbar />
-      <AnimeDetailPresent targetAnime={targetAnime} />
+      {targetAnime ? (
+        <AnimeDetailPresent targetAnime={targetAnime} />
+      ) : (
+        <Loading className="loading-class-center" />
+      )}
     </div>
   )
 }

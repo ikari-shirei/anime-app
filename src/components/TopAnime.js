@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import Navbar from './Navbar'
 import Card from './Card'
 import Footer from './Footer'
+import Loading from './Loading'
 import './TopAnime.scss'
 
 function TopAnime() {
@@ -66,15 +67,17 @@ function TopAnime() {
         </div>
 
         <div className="cards-container">
-          {currentList
-            ? currentList.map((x) => {
-                return <Card key={x.mal_id} anime={x} />
-              })
-            : topAnime
-            ? topAnime.map((x) => {
-                return <Card key={x.mal_id} anime={x} />
-              })
-            : ''}
+          {currentList ? (
+            currentList.map((x) => {
+              return <Card key={x.mal_id} anime={x} />
+            })
+          ) : topAnime ? (
+            topAnime.map((x) => {
+              return <Card key={x.mal_id} anime={x} />
+            })
+          ) : (
+            <Loading className="loading-class-center" />
+          )}
         </div>
       </div>
       <Footer />
