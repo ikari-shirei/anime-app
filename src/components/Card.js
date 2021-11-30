@@ -1,3 +1,4 @@
+import React from 'react'
 import { Link } from 'react-router-dom'
 import './Card.scss'
 
@@ -5,7 +6,7 @@ function Card({ anime }) {
   return (
     <div className="card">
       <div className="card-left">
-        <img src={anime.image_url} alt="title" />
+        <img src={anime.image_url} alt={anime.title} />
         <div className="rank-container">
           <div>
             Rank <span>{anime.rank}</span>

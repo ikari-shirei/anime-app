@@ -1,3 +1,4 @@
+import React from 'react'
 import './AnimeDetailPresent.scss'
 
 function AnimeDetailPresent({ targetAnime }) {
@@ -6,7 +7,10 @@ function AnimeDetailPresent({ targetAnime }) {
       {targetAnime ? (
         <div className="presentation-container-all">
           <div className="presentation-container">
-            <img src={targetAnime ? targetAnime.image_url : ''} alt="anime" />
+            <img
+              src={targetAnime ? targetAnime.image_url : ''}
+              alt={targetAnime.title}
+            />
             <div className="attributes-container">
               <div className="attribute-cell">
                 <div className="attribute-header">Rank</div>

@@ -38,7 +38,6 @@ function TopAnime() {
         setCurrentList(sortZA)
       } else if (e === 'episodes') {
         setCurrentList(sortEpisodes)
-        console.log(topAnime)
       } else {
         setCurrentList(topAnime)
       }
