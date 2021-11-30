@@ -1,5 +1,7 @@
+import React from 'react'
 import './Navbar.scss'
 import menu from '../icons/menu.svg'
+import close from '../icons/close.svg'
 import { Link } from 'react-router-dom'
 import { useState } from 'react'
 
@@ -20,8 +22,7 @@ function Navbar() {
   ) : (
     <div className="navbar-open">
       <div className="navbar-top">
-        {/*     <h1>Anime Soughter</h1> */}
-        <img onClick={switchNavbarState} src={menu} alt="menu" />
+        <img onClick={switchNavbarState} src={close} alt="close" />
       </div>
       <div className="navbar-content">
         <Link to="/" onClick={switchNavbarState}>

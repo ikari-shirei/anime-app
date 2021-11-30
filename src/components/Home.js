@@ -1,3 +1,4 @@
+import React from 'react'
 import './Home.scss'
 import Navbar from './Navbar'
 import Searchbar from './Searchbar'
@@ -53,7 +54,7 @@ function Home() {
 
     if (data.top) {
       const randomNumber = Math.floor(Math.random() * data.top.length)
-      console.log(data.top[randomNumber])
+
       setAnimeOfTheDay(data.top[randomNumber])
     }
   }

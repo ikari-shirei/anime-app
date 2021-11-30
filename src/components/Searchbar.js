@@ -1,3 +1,4 @@
+import React from 'react'
 import './Searchbar.scss'
 import { Link } from 'react-router-dom'
 
