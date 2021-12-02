@@ -36,3 +36,21 @@
     }
   }
 }
+
+@media only screen and (min-width: 768px) {
+  .top-anime {
+    color: $color1;
+
+    .main-content {
+      margin: 0 112px;
+
+      .cards-container {
+        .card {
+          margin: 16px;
+          width: 350px;
+          max-width: 400px;
+        }
+      }
+    }
+  }
+}

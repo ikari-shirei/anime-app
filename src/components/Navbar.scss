@@ -11,6 +11,7 @@
   padding: 8px 16px;
   background: $color1;
   color: $color2;
+  transition: 300ms;
 
   h1 {
     font-size: $font-size-4;
@@ -33,6 +34,7 @@
 
   background: $color3;
   color: $color1;
+  transition: 300ms;
 
   .navbar-top {
     display: flex;
@@ -59,6 +61,24 @@
       font-size: $font-size-6;
       font-weight: $font-weight-3;
       margin: 16px;
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .navbar {
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    padding: 8px 128px;
+
+    h1 {
+      margin-left: 16px;
+    }
+  }
+
+  .navbar-open {
+    .navbar-top {
+      margin: 8px 128px;
     }
   }
 }

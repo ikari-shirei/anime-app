@@ -60,3 +60,47 @@
     }
   }
 }
+
+@media only screen and (min-width: 768px) {
+  .home {
+    .start {
+      padding: 0 128px;
+    }
+    .anime-of-the-day {
+      margin: 16px 128px;
+    }
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .home {
+    .start {
+      padding: 0 256px;
+    }
+    .anime-of-the-day {
+      margin: 16px 256px;
+    }
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .home {
+    .start {
+      padding: 0 350px;
+    }
+    .anime-of-the-day {
+      margin: 16px 350px;
+    }
+  }
+}
+
+@media only screen and (min-width: 1366px) {
+  .home {
+    .start {
+      padding: 0 512px;
+    }
+    .anime-of-the-day {
+      margin: 16px 512px;
+    }
+  }
+}
