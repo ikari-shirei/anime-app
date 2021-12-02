@@ -9,6 +9,7 @@ function App() {
     <Router>
       <Routes>
         <Route path="/" element={<Home />} exact />
+        <Route path="/anime-app" element={<Home />} exact />
         <Route path="/top-anime" element={<TopAnime />} exact />
         <Route path="/anime:id" element={<AnimeDetail />} exact />
       </Routes>
